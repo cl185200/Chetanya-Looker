@@ -15,8 +15,16 @@ persist_with: chetanyatestlooker_default_datagroup
 
 explore: random {}
 
-explore: employee {}
+#explore: employee {}
 
 explore: department {}
 
 explore: empdepartement {}
+
+explore: employee{
+  join: department {
+    type: left_outer
+    sql_on: ${department.emp_name}=${employee.name};;
+    relationship: one_to_one
+  }
+}
