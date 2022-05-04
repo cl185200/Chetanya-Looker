@@ -23,7 +23,7 @@ explore: empdepartement {}
 
 explore: employee{
   join: department {
-    type: cross
+    type: inner
     sql_on: ${department.emp_name}=${employee.name};;
     relationship: one_to_one
   }
