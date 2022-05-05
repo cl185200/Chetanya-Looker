@@ -6,12 +6,11 @@ access_grant: can_view_data  {
 view: random {
   sql_table_name: [chetan_test.Random]
     ;;
+  required_access_grants: [can_view_data]
 
   dimension: first_name {
     type: string
     sql: ${TABLE}.FirstName ;;
-    required_access_grants: [can_view_data]
-
   }
 
   dimension: last_name {
