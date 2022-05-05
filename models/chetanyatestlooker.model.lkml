@@ -13,7 +13,14 @@ persist_with: chetanyatestlooker_default_datagroup
 # NOTE: please see https://looker.com/docs/r/sql/bigquery?version=22.6
 # NOTE: for BigQuery specific considerations
 
-explore: random {}
+access_grant: can_view_data  {
+  user_attribute: chetanattribute
+  allowed_values: [ "demotest"]
+}
+
+explore: random {
+  required_access_grants: [can_view_data]
+}
 
 #explore: employee {}
 
