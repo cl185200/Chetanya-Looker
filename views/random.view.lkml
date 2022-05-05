@@ -1,4 +1,4 @@
-access_grant: can_not_view_data  {
+access_grant: can_view_data  {
   user_attribute: chetanattribute
   allowed_values: [ "demotest"]
 }
@@ -7,11 +7,11 @@ view: random {
   sql_table_name: [chetan_test.Random]
     ;;
 
-  required_access_grants: [can_not_view_data]
-
   dimension: first_name {
     type: string
     sql: ${TABLE}.FirstName ;;
+    required_access_grants: [can_view_data]
+
   }
 
   dimension: last_name {
