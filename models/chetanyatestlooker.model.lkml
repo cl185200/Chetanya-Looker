@@ -15,7 +15,7 @@ persist_with: chetanyatestlooker_default_datagroup
 
 access_grant: can_view_data  {
   user_attribute: chetanattribute
-  allowed_values: [ "demotest"]
+  allowed_values: [ "no"]
 }
 
 explore: random {
